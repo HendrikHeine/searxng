@@ -1,0 +1,15 @@
+
+255 bytes
+version: '3'
+services:
+  searx:
+    container_name: 'searx'
+    image: 'searxng/searxng'
+    build: .
+    ports:
+      - 8080:8080
+    volumes:
+      - './data/searxng:/etc/searxng'
+    environment:
+      - 'BASE_URL=http://0.0.0.0:8080'
+      - 'INSTANCE_NAME=Searx'
