@@ -1,5 +1,3 @@
-
-255 bytes
 version: '3'
 services:
   searx:
